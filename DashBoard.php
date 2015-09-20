@@ -15,11 +15,21 @@
 </head>
 <body bgcolor="cyan">
   Select Survey:
-  <select>
-  <option value="Select">Select</option>}
-  <option value="survey1">Survey 1</option>
-  <option value="survey2">Survey 2</option>
-</select> 
+
+
+<script>
+   function updateText(){
+      $('input[name="surveyField"]').val($('select[name="surveylist"] option:selected').val());
+   }
+</script>
+
+<select name="surveylist" onchange="updateText()">
+  <option value = ''> Enter Survey </option>
+  <option value = 'Survey 1'> Survey 1 </option>
+ <option value =  'Survey 2'> survey 2 </option>
+</select>
+<input type='text' name = 'surveyField' />
+
 <br>
 <br>
 <br>
